@@ -2,7 +2,7 @@
 # Write Jupyter Notebook Code to Extract Data and Images from:
 # [Mars News Site](https://redplanetscience.com/)
 # Featured Space Image site [here](https://spaceimages-mars.com)
-# featured_image_url = 'https://spaceimages-mars.com/image/featured/mars2.jpg'
+# featured_image_url [here](https://spaceimages-mars.com/image/featured/mars2.jpg)
 # Astrogeology site [here](https://marshemispheres.com/)
 
 ## Missions to Mars by: Rudy Duvnjak
@@ -39,7 +39,7 @@
 - Write Flask App
 - Write data into html and display it
 
-![ETL](/Missions_to_Mars/images/cerbeerus_enhanced.tif)
+![ETL](/Missions_to_Mars/images/cerbeerus_enhanced.png)
 
 ## Accomplishments
 
@@ -48,6 +48,7 @@
 - Scraping Data
 - Script conversion
 - Flask utilization
+- Mongo DB accessing
 - HTML visualization
 
 
