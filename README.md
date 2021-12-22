@@ -39,7 +39,7 @@
 - Write Flask App
 - Write data into html and display it
 
-![ETL](/Missions_to_Mars/images/cerbeerus_enhanced.png)
+![ETL](/Missions_to_Mars/images/Mars-Hemispheres.jpg)
 
 ## Accomplishments
 
