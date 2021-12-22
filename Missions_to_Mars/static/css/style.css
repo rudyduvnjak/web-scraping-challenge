@@ -1,0 +1,140 @@
+/* Nabar Button Style*/
+a.navbar-brand{
+    margin-left: 10px;
+    padding: 10px;
+    background-color: rgb(29, 121, 197);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    border: 10px solid black;
+}
+
+
+
+
+
+/*Footer Style*/
+.page-footer{
+    background-color: rgb(92, 90, 90);
+    margin-top: 50px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-copyright{
+    color:white;
+    border-top: 5px solid #5177af
+    
+}
+
+/* h3 Header Text Style*/
+h3{
+    color: rgb(13, 27, 211);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 15px;
+}
+h4{
+    color: rgb(13, 27, 211);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 15px;
+}
+b{text-align: center}
+h4.heading{
+    color: rgba(9, 9, 10, 0.534);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 20px;
+}
+.img{
+    max-width:auto; 
+    max-height:auto; 
+    border: 3px solid rgba(15, 16, 97, 0.788)
+}
+.column-md-8 { width:50%; float:left; }
+.border-light { border: 1px solid black; }
+/* Image Style*/
+.img-thumbnail{
+    padding:10px;
+    border: none;
+}
+
+/* P Text Styling*/
+p{
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: large;
+   padding:10px;
+}
+
+/* Body Background Colour*/
+body{
+    background-color: rgba(223, 222, 222, 0.89);
+    padding:10px
+}
+.col-md-12{
+    background-color: rgba(255, 255, 255, 0.89);
+    padding-top: 20px;
+    padding-bottom:40px;
+}
+
+/* Image Border*/
+.pic{
+    border: 3px solid rgb(81, 175, 160);
+}
+/* Navbar Style*/
+.navbar{
+    padding-top:0px;
+    padding-bottom: 0px;
+    padding-right:40px;
+}
+
+.nav-item.dropdown.show {
+    background-color: rgb(221, 221, 221);
+}
+
+.dropdown-menu {
+    margin: 0;
+}
+
+/* Content Style*/
+.content {
+    padding-top: 50px;
+    padding-bottom: 80px;
+    overflow: hidden;
+}
+
+.content.bg-white {
+    margin-top: 15px;
+}
+
+
+/* Table Text*/
+tr>th:nth-child(1),
+tr>th:nth-child(3),
+tr>th:nth-child(6),
+tr>th:nth-child(7),
+tr>th:nth-child(8),
+tr>th:nth-child(9),
+tr>th:nth-child(10),
+tr>td:nth-child(1),
+tr>td:nth-child(3),
+tr>td:nth-child(6),
+tr>td:nth-child(7),
+tr>td:nth-child(8),
+tr>td:nth-child(9),
+tr>td:nth-child(10) {
+    text-align: right;
+}
+
+
+/* Navbar adjustmetns*/
+@media(max-width:767px){
+    .navbar.bg-light{
+        background-color: rgb(139, 201, 230)!important;    
+    }
+
+    .navbar-collapse{
+        background-color: #97b2d1af;
+    }
+    .navbar{
+        padding:inherit;
+    }
+}

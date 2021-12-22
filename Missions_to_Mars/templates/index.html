@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mission to Mars</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+  </head>
+  <body>
+       <!-- Header with primary button to refresh data -->
+    <div class="container-fluid">
+        <div class="jumbotron text-center"  style="background-color:00FFFF"s>
+        <h1><b>Mission to Mars</b></h1>
+        <a class="btn btn-primary btn-lg" href="/scrape" role="button">Get New Data</a>
+        <h6><a href="/scrape">Welcome, you can access latest info about Mars by clicking this link or Get New Data button above!</a></h6>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="col-md-12">
+          <div class="media">
+            <div class="media-body">
+                <h3><b>Latest Mars News</b></h3>
+                    <h4 class="heading">{{disp_data.news_title | safe}}</h4>
+                <p>{{disp_data.news_p | safe}}</p>
+              <hr class="my-4">
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Create a row with two columns one for featured image and one for data table-->
+    
+    
+    <div class = "row" style="margin-top:80px;" style = "padding:20">
+      <h2 class="text-center"><b>Featured Mars Image and Facts About Red Planet</b></h2>
+            <!-- Left Side -->
+            <!-- Featured Image -->  
+        <div class="col-md-7 border-light" style = "margin:30px">
+          <h4 class="text-center">Featured Mars Image</h4>       
+             <!-- Block parent element -->
+              <a href="{{disp_data.featured_image_url | safe}}" target="_blank"><img class="img-fluid" src="{{disp_data.featured_image_url}}"
+                  alt="Featured Mars Image" width=900px height=500px></a>    
+        </div>
+                      
+        <div class="col-md-4 border-light" style="margin:30px">
+            <h4 class="text-center">Mars Facts</h4>
+            {{disp_data.mars_table | safe}}
+            
+        </div>
+      
+    </div>
+    <!-- New Section is divided into a 2x2 panel for Hemisphere Images -->
+    
+    <div class="row" style="margin-top:80px;" style = "padding:20">
+        <div class="page-header">
+        </div>  
+        
+        <div class="col-md-12" style = "margin:30px">
+            <h2 class="text-center"><b>Mars Hemispheres</b></h2>
+            <hr>
+            <div class="row">
+              {% for i in disp_data.hemisphere_image_urls %}
+                <div class="col-3 col-md-6"padding="20">
+                    <h4 class="text-center">{{i.title}}</h4>
+                    <a href="{{i.img_url}}"><img src="{{i.img_url}}" width="700"  alt="Hemisphere"></a>
+                </div>
+              {%endfor%}  
+            </div>
+        </div>
+         
+         
+    </div>
+         
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+  </body>
+</html>  
+
+   
